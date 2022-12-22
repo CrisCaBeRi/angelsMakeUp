@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Satisfy&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primary-color: #FFE0F4;
+    --unas-section: #804695 ;
+    --cabello-section: #E99AC3;
+    --cuidado-section: #A570AE;
+    --maquillaje-section:#ED6CA6;  
+    --second-font:'Bodoni Moda', serif; 
+    --font-titles:'Satisfy', cursive;
+}
+
+.header{
+    width:auto;
+    background-color: var(--primary-color);
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;   
+    flex-flow: row wrap; /* flex hacia abajo cuando esta en mobil */    
+    align-items: center;    
+}
+
+.logo {    
+    width: 180px;
+    height: 100px;
+}
+.Cabecera-button{
+    display:none;
+    cursor: pointer;
+}
+.Cabecera-svg{
+    width:2em;
+    height:2em;
+    fill:white;
+}
+
+.Cabecera-ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 12vw 12vw 12vw 12vw 12vw;
+    
+    *display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.Cabecera-li{    
+    margin: 0 .5em;
+}
+
+.roundicon_buycart {
+    display: flex;    
+    background-color: white;    
+    padding: 8px;
+    align-items: center;   
+    border-radius: 50%; 
+}
+.buycart {
+    width: 20px;
+    height: 20px;
+} 
+
+.nav_buycar {
+    display: none;
+}
+
+@media screen and (max-width:678px){
+
+    .header{        
+        padding-right: 10px;            
+    }
+
+    .Cabecera-button{
+        display: flex;
+    }
+    .Cabecera-nav{
+        width:100%;        
+        height:0vh;
+        opacity: 0;
+        overflow: hidden;
+        transition: all .5s ease;
+    }
+    .Cabecera-nav.isActive{
+        height:30vh;
+        opacity: 1;
+    }
+    .Cabecera-ul{
+        display: flex;
+        flex-direction: column;       
+    }
+
+    .Cabecera-li{    
+        margin: 10px;
+    }
+}

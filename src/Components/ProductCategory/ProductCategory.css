@@ -1,0 +1,8 @@
+.fichaProducto{
+    margin: 5px;
+    width: 20%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
