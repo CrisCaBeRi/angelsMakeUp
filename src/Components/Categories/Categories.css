@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Satisfy&display=swap');
+
+:root{
+    --primary-color: #FFE0F4;
+    --unas-section: #804695 ;
+    --cabello-section: #E99AC3;
+    --cuidado-section: #A570AE;
+    --maquillaje-section:#ED6CA6;  
+    --second-font:'Bodoni Moda', serif; 
+    --font-titles:'Satisfy', cursive;
+}
+
+
+.banner_categories {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-titles);
+    color: var(--unas-section);
+    padding: 10px;
+    margin-bottom: 25px;   
+}
+
+.images_categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container_category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_category img {
+    width: 50vw;
+}
+
+.container_category h2 {        
+    padding: 10px 30px;
+    margin: 30px 0 50px 0;
+    color: white;
+    border-radius: 30px;
+    font-family: var(--second-font);
+    font-size: 5vw;
+    
+}
+
+.ds1 {
+    background-color: var(--unas-section);
+}
+
+.ds2 {
+    background-color: var(--cabello-section);    
+}
+
+.ds3 {
+    background-color: var(--cuidado-section);
+}
+
+.ds4 {
+    background-color: var(--maquillaje-section);
+}
+
+
+@media screen and (min-width: 600px) {
+    .images_categories {
+        display: grid;
+        grid-template-columns: repeat(4, 15vw);
+        gap: 8vw;     
+    }
+
+    .container_category img {
+        width: 18vw;
+    }
+    .container_category h2 {         
+        font-size: 2vw;        
+    }   
+}

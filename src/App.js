@@ -1,6 +1,6 @@
 import './App.css';
-import DarkVariantExample from './Components/Carousel Footer/CarouselFooter';
-
+import CarouselHome from './Components/CarouselHome/CarouselHome';
+import Categories from './Components/Categories/Categories';
 import Footer from './Components/Footer/Footer';
 import Cabecera from './Components/Header/Header';
 
@@ -16,19 +16,12 @@ function App() {
       {/* <Home/> */}
       
      <Cabecera/>
-
-     <Footer/>
-
-     <DarkVariantExample/>
-     
-     
-     
-      
-      
+     <CarouselHome/>
+     <Categories/>
+     <Footer/>  
 
       {/* <ProductCategory/> */}
 
-      
     </div>
   );
 }
