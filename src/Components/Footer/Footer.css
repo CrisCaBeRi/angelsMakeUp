@@ -16,15 +16,24 @@
     --font-titles:'Satisfy', cursive;
 }
 
-footer {
-    margin: 5px 0 ;
-    padding: 15px;    
-    display: grid;
-    grid-template-columns: repeat(3, 30vw);
-    background-color: var(--primary-color);    
-    align-items: center; 
-    text-align: center; 
-    gap: 2vw;  
+footer {    
+    background-color: var(--primary-color);   
+    height: 35vh;  
+    display: flex;
+    justify-content: center;
+}
+
+.container_carousel_footer {
+    display: flex;   
+    width: 80%; 
+    padding: 50px; 
+    text-align: center;  
+}
+
+.container_carousel_footer h2{
+    color: var(--unas-section);
+    font-family: var(--font-titles);
+    font-size: 6vw;
 }
 
 
