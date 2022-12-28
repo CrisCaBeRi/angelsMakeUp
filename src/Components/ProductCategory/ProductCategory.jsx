@@ -2,6 +2,7 @@ import ProductsData from "../../Data/ProductsData";
 import './ProductCategory.css'
 
  const ProductCategory = () => {
+    
     return (
 
         //Estructura para filtrar por categoría

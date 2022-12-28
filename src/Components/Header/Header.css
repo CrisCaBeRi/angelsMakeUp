@@ -30,12 +30,14 @@
     width: 180px;
     height: 100px;
 }
+
 .Header-button{
     display:none;
     cursor: pointer;
     border: var(--cabello-section);
     background-color: transparent;
 }
+
 .Header-nav-svg{
     width:2em;
     height:2em;
@@ -45,21 +47,17 @@
 .Header-ul{
     list-style: none;
     display: grid;
-    grid-template-columns: 12vw 12vw 22vw 10vw 10vw;  
-    gap: 5px;  
-    *flex-flow: row nowrap;
-    *justify-content: flex-end;
+    grid-template-columns: 12vw 12vw 12vw 12vw 12vw;  
+    gap: 5px;     
     align-items: center;
     margin: 0;
     padding: 0;
     text-align: center;
-
 }
 
 .Header-li{    
     margin: 0 .5em; 
-    font-size: 20px;
-     
+    font-size: 20px;  
 }
 
 .navbar-text {
@@ -68,21 +66,6 @@
 } 
 
 
-
-
-
-/* .roundicon_buycart {
-    display: flex;    
-    background-color: white;    
-    padding: 8px;
-    align-items: center;   
-    border-radius: 50%; 
-} */
-
-/* .buycart {
-    width: 20px;
-    height: 20px;
-}  */
 
 .nav_buycar {
     display: none;

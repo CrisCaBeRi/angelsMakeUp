@@ -36,7 +36,7 @@
 }
 
 .container_category img {
-    width: 50vw;
+    width: 45vw;
 }
 
 .container_category h2 {        
@@ -45,7 +45,7 @@
     color: white;
     border-radius: 30px;
     font-family: var(--second-font);
-    font-size: 5vw;
+    font-size: 3vw;
     
 }
 
@@ -77,6 +77,6 @@
         width: 18vw;
     }
     .container_category h2 {         
-        font-size: 2vw;        
+        font-size: 18px;        
     }   
 }
