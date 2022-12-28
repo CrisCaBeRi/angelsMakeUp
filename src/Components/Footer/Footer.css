@@ -4,6 +4,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 }
 
 :root{
@@ -28,12 +29,43 @@ footer {
     width: 100%; 
     padding: 50px; 
     text-align: center;  
+    font-family: var(--second-font); 
+
 }
 
 .container_carousel_footer h2{
     color: var(--unas-section);
     font-family: var(--font-titles);
-    font-size: 6vw;
+    font-size: 5vw;
+}
+
+.contact i {
+    font-size: 10vw;
+}
+
+.container_carousel_footer p {
+    font-size: 3vw;
+}
+
+
+@media screen and (min-width: 600px) {
+    .container_carousel_footer h2{        
+        font-size: 3vw;
+    }
+
+    .container_carousel_footer p {
+        font-size: 1.5vw;
+    }
+
+    .contact i {
+        font-size: 4vw;
+    }
+
+
+    
+
+
+     
 }
 
 

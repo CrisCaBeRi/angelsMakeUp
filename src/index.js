@@ -5,13 +5,58 @@ import App from './App';
 import 'remixicon/fonts/remixicon.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import Home from './Pages/Home/Home';
+import ProductsNails from './Pages/Products/ProductsNails';
+import ProductsCare from './Pages/Products/ProductCare';
+import ProductsMakeup from './Pages/Products/ProductMakeup';
+import BuyCart from './Pages/BuyCart/BuyCart';
+
+
+const router = createBrowserRouter([
+  {
+    path: "/home",
+    element : <Home/> 
+  },
+
+  {
+    path: "/products_nails",
+    element : <ProductsNails/> 
+  },
+
+  {
+    path: "/products_hair",
+    element: <ProductsNails/>
+  },
+
+  {
+    path: "/products_care",
+    element: <ProductsCare/>
+  },
+
+  {
+    path: "/products_makeup",
+    element: <ProductsMakeup/>
+  },
+
+  {
+    path: "/buycart",
+    element: <BuyCart/>
+  },  
+
+  {
+    path:"/",
+    element : <App/>
+  }
+
+])
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
