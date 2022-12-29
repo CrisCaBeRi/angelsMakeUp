@@ -12,6 +12,7 @@ import ProductsNails from './Pages/Products/ProductsNails';
 import ProductsCare from './Pages/Products/ProductCare';
 import ProductsMakeup from './Pages/Products/ProductMakeup';
 import BuyCart from './Pages/BuyCart/BuyCart';
+import ProductsHair from './Pages/Products/ProductHair';
 
 //Se crea una constante tipo array - objeto que use el método createroutebrowser. Adentro, se utilizan los elemento del objeto path y element para vincular las páginas.
 const router = createBrowserRouter([
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
 
   {
     path: "/products_hair",
-    element: <ProductsNails/>
+    element: <ProductsHair/>
   },
 
   {

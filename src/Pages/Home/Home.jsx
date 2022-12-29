@@ -1,43 +1,18 @@
 import React from "react";
-
-import './home.css';
-
-/* import CarouselHome from "../../Components/CarouselHome/CarouselHome";
+import CarouselHome from "../../Components/CarouselHome/CarouselHome";
 import Categories from "../../Components/Categories/Categories";
 import Footer from "../../Components/Footer/Footer";
-import Header from "../../Components/Header/Header"; */
-
-import NavbarCategories from "../../Components/NavbarCategories/NavbarCategories";
-import ProductCategory from "../../Components/ProductCategory/ProductCategory";
-
-
-
-
+import Header from "../../Components/Header/Header";
 
 const Home = _ => {  
-
-    
-
-
     return (
-
-        <>    
-            <NavbarCategories/>  
-
-            {/* <ProductCategory/>  */}
-
-
-            {/* <Header/>  
+        <>  
+            <Header/>  
             <CarouselHome/>  
             <Categories/>
-            <Footer/>  */}  
-
-                  
-
+            <Footer/>   
         </>
     )
-
-
 }
 
 export default Home; 

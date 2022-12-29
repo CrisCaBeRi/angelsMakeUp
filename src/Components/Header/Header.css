@@ -88,7 +88,7 @@
         transition: all .5s ease;
     }
     .Header-nav.isActive{
-        height:35vh;
+        height: 42vh;
         opacity: 1;
     }
     .Header-ul{

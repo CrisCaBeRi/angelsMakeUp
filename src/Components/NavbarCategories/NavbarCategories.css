@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Satisfy&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primary-color: #FFE0F4;
+    --unas-section: #804695 ;
+    --cabello-section: #E99AC3;
+    --cuidado-section: #A570AE;
+    --maquillaje-section:#ED6CA6;  
+    --second-font:'Bodoni Moda', serif; 
+    --font-titles:'Satisfy', cursive;
+}
+
+.container-navbar {    
+    display: flex; 
+    flex-direction: column;    
+} 
+
+.container-navbar h2 {  
+    margin: 10px;
+    width: 40%;
+    text-align: center;
+    font-size: 7vw;
+    padding: 5px 0;
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    font-family: var(--font-titles);
+    color: var(--unas-section);    
+}
+
+.img-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: 15px;   
+}
+
+.container-navbar img {    
+    width: 40%;
+    height: 40%;
+    margin-bottom: 20px;
+}
+
+.container-navbar h3 {
+    padding: 2% 8%;
+    background-color: var(--cabello-section);
+    font-size: 7vw;
+    font-family: var(--second-font);    
+    border-radius: 50px;
+    color: white;    
+}
+
+
+.buttons-nav {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    margin-bottom: 20px;
+} 
+
+.buttons-nav button {
+    width: 30%;
+    padding: 5px 0;  
+    margin: 0 5px;
+    border-radius: 50px;
+    border: none;    
+    font-family: var(--second-font);
+    color: white;
+    font-size:4vw;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column; 
+    margin: 20px 40px;  
+}
+
+.card-product{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    margin: 15px 0;    
+    padding: 20px;  
+    border-radius: 10px;  
+    box-shadow: 6px 8px 26px 6px rgba(204, 204, 204, 1);    
+}
+
+.card-product img {
+    width: 90%;
+    height: 60%;
+}
+
+.card-product h1 {
+    margin: 10px 0;
+    font-size: 7vw;
+    font-family: var(--font-titles);
+}
+
+.card-product p {
+    font-size: 4vw;
+    font-family: var(--second-font);
+}
+
+.price-car {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 20%);  
+    margin: auto;        
+}
+
+.price-car h3 {
+    font-size: 4vw;
+    font-family: var(--second-font);
+    border-radius: 15px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;    
+}
+
+.price-car i {
+    grid-column-start: 5;
+    font-size: 25px;
+}
+
+@media screen and (min-width:678px){
+    .container-navbar {        
+        margin-top: 25px;
+        display: flex;        
+        align-items: center;       
+        width: 30%;
+    }
+
+    .container-navbar h2 {
+        width: 70%;
+        font-size: 3vw;
+        margin: 0;
+    }
+
+    .img-name {
+        margin: 0;              
+    }
+
+    .container-navbar img {
+        width: 90%; 
+        height: 60%;
+        margin-bottom:10px;
+    }
+
+    .container-navbar h3 {
+        font-size: 2.5vw;
+    }
+
+    .buttons-nav{
+        flex-direction: column;
+    }
+
+    .buttons-nav button {
+        width: 100%;
+        margin: 5px;
+        font-size: 2vw;
+
+        padding: 5px 10px;
+    }
+
+    .container-general {
+        display: flex;  
+        width: 100%;      
+    }
+
+    .cards {    
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;      
+    } 
+
+    .card-product {
+        width: 250px;
+        height: fit-content;
+        margin: 15px;        
+    }
+
+    .card-product img {
+        width: 180px;
+        height: 150px;
+    }
+
+    .card-product h1 {
+        font-size: 2vw;
+    }
+
+    .card-product p {
+        font-size: 1.2vw;
+    }
+
+    .price-car {
+        margin: 0;
+    }
+
+    .price-car h3  {
+        font-size: 1.2vw;        
+    }
+
+
+
+    
+
+
+    
+
+
+
+
+
+
+}
