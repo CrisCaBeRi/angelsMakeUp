@@ -5,6 +5,7 @@ import Logo from "./Assets/Logo.png";
 import { Link } from 'react-router-dom';
 
 
+
 const Header= () => { 
     
       
@@ -42,7 +43,7 @@ const Header= () => {
                         </li>
 
                         <li className="Header-li">                            
-                            <Link to="/products_hair" className='navbar-text'>
+                            <Link to="/products_hair" className='navbar-text'>           
                                 <p style={{padding:"0", margin:"0"}}> Cabello </p>
                              </Link>
                         </li>

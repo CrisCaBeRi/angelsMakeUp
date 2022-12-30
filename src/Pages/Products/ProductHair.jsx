@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../Components/Header/Header";
 import NavbarCategories from "../../Components/NavbarCategories/NavbarCategories";
+import Footer from "../../Components/Footer/Footer";
 
 import img from './Assets/Hair_img.png'
 
@@ -11,12 +12,14 @@ const ProductsHair = _ => {
             <Header/>
             <NavbarCategories 
                 categoryName = "Cabello"
-                img = {img}
+                img = {img}                
                 filter1 = "Shampoo"
                 filter2 = "Tintes"
                 filter3 = "Tratamientos"  
-                primaryColor = "#E99AC3"                  
-            />         
+                primaryColor = "#ED6CA6"
+                filterSection = "Cabello"                  
+            /> 
+            <Footer/>        
         </>
     )
 }
