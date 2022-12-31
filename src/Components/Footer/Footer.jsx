@@ -17,10 +17,16 @@ const Footer = () => {
                     <Carousel.Item>
                     <div className="contact">
                         <h2>Siguenos en redes</h2>
-                        <div className="social">                                               
-                            <i class="ri-instagram-line" style = {{color:"pink"}}></i>
-                            <i class="ri-facebook-circle-fill" style = {{color:"lightblue"}}></i>
-                            <i class="ri-whatsapp-line" style = {{color:"lightgreen"}}></i>
+                        <div className="social">   
+                            <a href="https://www.facebook.com/">
+                                <i class="ri-facebook-circle-fill" style = {{color:"lightblue"}}></i>                          
+                            </a>   
+                            <a href="https://www.instagram.com/">
+                                <i class="ri-instagram-line" style = {{color:"pink"}}></i>                            
+                            </a>  
+                            <a href="https://web.whatsapp.com/">
+                                <i class="ri-whatsapp-line" style = {{color:"lightgreen"}}></i>                            
+                            </a>                                        
                         </div>                
                     </div>                      
                     </Carousel.Item> 

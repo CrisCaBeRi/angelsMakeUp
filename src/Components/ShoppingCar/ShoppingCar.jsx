@@ -1,9 +1,8 @@
 //Import of the elements that are used 
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./ShoppingCar.css";
 import imgBackground from './Assets/backgorundCart.png';
-import ReactWhatsapp from "react-whatsapp";
 
 const Cart = () => {
   //Reducer methods to maipulate the buycart 
@@ -14,9 +13,22 @@ const Cart = () => {
     return acc + currentvalue.prPrice * currentvalue.prQuantity;
   };
   const total = cart.reduce(addition, 0);
-  
+
+  //Form to send Name and adress for the order
+  const [form, setForm] = useState({});
+
+  const sendWhatsapp = () => { //Function that validates the fill of the inputs down 
+    if (form?.name && form?.text) { //if both are true, send the message
+        let numero = 573212036893;
+        let url = `https://wa.me/${numero}?text= Hola Angel's Makeup, me gustaría ordenar los siguientes productos: ${cart.map( //Map agan to take the list opf the products that the user will buy 
+        (item) => item.prQuantity + "|" + item.prName)} con un total a pagar: $${total}(sin envío), $${total + 3500} con envío. ||Datos del cliente: Nombre: ${form?.name}, Dirección: ${form?.text}||`;
+        window.open(url); //open the url to send the message   
+    }
+  }
+  const changeText = e => setForm({ ...form, [e.target.name]: e.target.value }); //Function to save the input content 
+
   return (
-    <>
+    <>           
       <h1 className="ttle-cart">Carrito de compras</h1>
       <div className="cards-shopping">
         {cart.map((item) => { //map method to print the cards of the products selected 
@@ -65,29 +77,33 @@ const Cart = () => {
           );
         })}
         {/* Ternary operator to print elements if the buy cart is empty */}
-        {total <= 0 && (<div className="empty-cart">       
-            <h1>Todo esta limpio por aquí...</h1>
+        {total <= 0 && (<div className="empty-cart">                  
+            <h1>Todo esta limpio por aquí...</h1>            
             <img src={imgBackground}alt="" />
           </div>)}
         {/* Ternary operator to print elements if the buy cart has one or more elements */}
-        {total > 0 && (       
-          <div className="container-send">              
-            <h3>Total: <span>${total} </span></h3>            
+        {total > 0 && ( 
+          <div className="container-send">
+            <h2>Resumen de tu pedido</h2>                         
+            <h3>Subtotal: <span>${total} </span></h3>            
             <h3>Envío: <span>${3500} </span></h3>
-            <h3>Total a pagar: <span>${total + 3500} </span></h3>
-              {/* button created to send the order and this button use a library called react ReactWhatsapp that are used to send a default mesage on whatsapp app  */}
-              <button>
-                <ReactWhatsapp 
-                  number="+57 3212036893"
-                  message={`Hola Angel's Makeup, quisiera ordenar lo siguiente:  
-                ${cart.map( //Map agan to take the list opf the products that the user will buy 
-              (item) => item.prQuantity + " / " + item.prName 
-                )}
-                || Total a pagar: $${total + 3500}`}
-                >
-                  <p>Enviar pedido <i style={{color:"white"}} class="ri-whatsapp-line"></i></p>
-                </ReactWhatsapp>
-              </button>         
+                <div className="form"> {/* Form text to take information of the user  */}                 
+                  <div className="input-name">
+                    <h4>Ingresa tu nombre:</h4>
+                    <input name="name" className="input-form" type="text" placeholder="Nombre" onChange={changeText} /> {/* call of the function to save text temporaly */}
+                  </div>
+                  <div className="input-adress">
+                    <h4>Dirección del envío</h4> 
+                    <input name="text" className="input-form" type="text" placeholder="Dirección para el envío" onChange={changeText}/>
+                  </div>                     
+                </div>
+                <h3 className="amount">Total a pagar: <span>${total + 3500} </span></h3> {/* print of the property saved on total an add que cost of the messenger */} 
+
+                <div className="send">
+                    <button className="send-whatsapp" onClick={sendWhatsapp}> {/* go to the function who validates the fill of the input to send the message */}
+                      <p>Enviar pedido <i style={{color:"white"}} class="ri-whatsapp-line"></i></p>                       
+                    </button>
+                </div>                  
           </div>
         )}
       </div>

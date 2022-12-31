@@ -6,7 +6,6 @@
     margin: 0;
     
 }
-
 :root{
     --primary-color: #FFE0F4;
     --unas-section: #804695 ;
@@ -16,14 +15,12 @@
     --second-font:'Bodoni Moda', serif; 
     --font-titles:'Satisfy', cursive;
 }
-
 footer {    
     background-color: var(--primary-color);   
     height: 35vh;  
     display: flex;
     justify-content: center;
 }
-
 .container_carousel_footer {
     display: flex;   
     width: 100%; 
@@ -32,31 +29,27 @@ footer {
     font-family: var(--second-font); 
 
 }
-
 .container_carousel_footer h2{
     color: var(--unas-section);
     font-family: var(--font-titles);
     font-size: 5vw;
 }
-
 .contact i {
     font-size: 10vw;
 }
-
+.contact a {
+    text-decoration: none;
+}
 .container_carousel_footer p {
     font-size: 3vw;
 }
-
-
 @media screen and (min-width: 600px) {
     .container_carousel_footer h2{        
         font-size: 3vw;
     }
-
     .container_carousel_footer p {
         font-size: 20px;
     }
-
     .contact i {
         font-size: 4vw;
     }     
