@@ -6,7 +6,7 @@ import Footer from "../../Components/Footer/Footer";
 import img from './Assets/Care_img.png'
 
 
-const ProductsCare = _ => {
+const ProductsCare = () => {
     return (
         <>
             <Header/>

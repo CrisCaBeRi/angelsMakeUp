@@ -1,16 +1,12 @@
 import React from "react";
-import Cabecera from "../../Components/Header/Header";
-
+import Header from "../../Components/Header/Header";
+import Cart from "../../Components/ShoppingCar/ShoppingCar";
 
 const BuyCart = _ => {
     return (
         <>
-        <Cabecera/>
-
-        
-        
-        
-        
+            <Header/> 
+            <Cart/>        
         </>
     )
 }

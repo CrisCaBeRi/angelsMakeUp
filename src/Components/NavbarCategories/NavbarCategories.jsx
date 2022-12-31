@@ -1,11 +1,21 @@
 import React, {useState} from "react";
+
 import ProductsData from "../../Data/ProductsData";
 import './NavbarCategories.css';
 
-const NavbarCategories = (props) => {
-    
-    const [data, setData] = useState(ProductsData); 
+//REDUCER
 
+import { useSelector, useDispatch } from "react-redux";
+
+const NavbarCategories = (props) => { 
+
+    //Reducer
+    const cart = useSelector((state)=>state);
+    console.log(cart)
+    const dispatch = useDispatch(); 
+
+
+    const [data, setData] = useState(ProductsData);
     const filterSection = (sectionItem) => {
         const result = ProductsData.filter((curDate)=> {       
             return curDate.prSection === sectionItem;
@@ -24,7 +34,7 @@ const NavbarCategories = (props) => {
                     </div>
                     
                     <div className="buttons-nav">
-                        {/* Filter selection enviar las props */}
+                        
                         <button onClick={()=> filterSection( props.filter1 )} style={{backgroundColor: props.primaryColor}}> { props.filter1 } </button>
                         <button onClick={()=> filterSection( props.filter2 )} style={{backgroundColor: props.primaryColor}}> { props.filter2 } </button>
                         <button onClick={()=> filterSection( props.filter3 )} style={{backgroundColor: props.primaryColor}}> { props.filter3 } </button>
@@ -33,30 +43,32 @@ const NavbarCategories = (props) => {
                 
                 <div className="cards">
                     {data.map((product) => {
-                        const {
-                            prItem,                         
-                            prName, 
-                            prImage, 
-                            prDescription, 
-                            prPrice } = product;
 
+
+                        product.prQuantity = 1;  
+                        
+                        
                             if (product.prCategory === props.filterSection) {
                                 return (                
                                     <>
-                                        <div className="card-product" key={prItem}>         
-                                            <img src={ prImage } alt="" />                         
-                                            <h1 style= {{color: props.primaryColor}} >{ prName }</h1>                               
-                                            <p>{prDescription}</p>                              
+                                        <div className="card-product" key={product.prItem}>  
+
+                                            <img src={ product.prImage } alt="" />                         
+                                            <h1 style= {{color: props.primaryColor}} >{ product.prName }</h1>                               
+                                            <p>{product.prDescription}</p>                              
                                             <div className="price-car">
-                                                <h3 style= {{backgroundColor: props.primaryColor}}> ${prPrice}</h3>    
-                                                <i className="ri-shopping-cart-2-fill"> </i> 
+                                                <h3 style= {{backgroundColor: props.primaryColor}}> ${product.prPrice}</h3> 
+
+                                                <button onClick={ () => dispatch ({type:"ADD", payload: product}) }>                
+                                                    <i className="ri-shopping-cart-2-fill"> </i>
+                                                </button>  
                                             </div>
                                         </div>                  
                                     </>               
                                 )
                             }                             
-                        }
-                    )}
+                        }                        
+                    )} 
                 </div>
             </div>    
         </>   

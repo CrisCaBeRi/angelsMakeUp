@@ -14,6 +14,16 @@ import ProductsMakeup from './Pages/Products/ProductMakeup';
 import BuyCart from './Pages/BuyCart/BuyCart';
 import ProductsHair from './Pages/Products/ProductHair';
 
+
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import Reducer from './Components/ShoppingCar/Reducer.jsx';
+
+const store =createStore(Reducer);
+
+
+
+
 //Se crea una constante tipo array - objeto que use el método createroutebrowser. Adentro, se utilizan los elemento del objeto path y element para vincular las páginas.
 const router = createBrowserRouter([
   {
@@ -54,9 +64,13 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} /> {/* se llama el otro método react router que llama la constante con la variable que contiene el array objeto ⬆️. */}
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>    
+        <RouterProvider router={router} /> {/* se llama el otro método react router que llama la constante con la variable que contiene el array objeto ⬆️. */}   
+    </React.StrictMode>  
+  </Provider>  
+
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
