@@ -56,7 +56,6 @@
     color: white;    
 }
 
-
 .buttons-nav {
     display: flex;
     align-items: center;  
@@ -110,8 +109,8 @@
 .price-car {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(5, 20%);  
-    margin: auto;        
+    grid-template-columns: repeat(5, 20%);      
+    align-items: center;      
 }
 
 .price-car h3 {
@@ -119,15 +118,23 @@
     font-family: var(--second-font);
     border-radius: 15px;
     color: white;
-    padding: 5px;
+    padding: 3px;
+    margin: 0;
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;    
 }
 
-.price-car i {
-    grid-column-start: 5;
+.price-car i {    
     font-size: 25px;
+    color: green;
+}
+
+.price-car button {
+    grid-column-start: 5;
+    border: none;
+    background-color: transparent;
+
 }
 
 @media screen and (min-width:678px){

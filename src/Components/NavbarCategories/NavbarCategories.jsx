@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-
 import ProductsData from "../../Data/ProductsData";
 import './NavbarCategories.css';
 
@@ -43,11 +42,7 @@ const NavbarCategories = (props) => {
                 
                 <div className="cards">
                     {data.map((product) => {
-
-
-                        product.prQuantity = 1;  
-                        
-                        
+                        product.prQuantity = 1;                  
                             if (product.prCategory === props.filterSection) {
                                 return (                
                                     <>
@@ -66,8 +61,9 @@ const NavbarCategories = (props) => {
                                         </div>                  
                                     </>               
                                 )
-                            }                             
-                        }                        
+                            } return null                            
+                        } 
+                                               
                     )} 
                 </div>
             </div>    

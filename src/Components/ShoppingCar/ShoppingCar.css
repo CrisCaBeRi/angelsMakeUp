@@ -3,7 +3,7 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: 0;  
 }
 :root{
     --primary-color: #FFE0F4;
@@ -15,11 +15,16 @@
     --font-titles:'Satisfy', cursive;
 }
 
+
 .ttle-cart {
     margin: 20px;
     color: var(--unas-section);
     font-family: var(--font-titles);
     font-size: 7vw;
+}
+
+.items-oncar {
+    margin: 0 50px;
 }
 
 .items-oncar p {
@@ -49,32 +54,127 @@
     font-size: 25px;
     
 }
+.items-oncar span {
+    color: green;
+}
 .buttons-cart button {
     border: none;
     background-color: transparent;
 }
 
 
+.empty-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.empty-cart h1{
+    font-size: 7vw;
+    font-family: var(--font-titles);
+}
+.empty-cart img {
+    width: 80vw;
+}
+
 .container-send {  
     display: flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center; 
-    *position: fixed; 
-    bottom: 0;  
+    text-align: center;       
 } 
+.container-send h3 {
+    font-size: 5vw;
+    font-family: var(--font-titles); 
+}
+.container-send span {
+    color: green;
+}
 
-
-.container-send button{ 
-    width: 50vw;  
+.container-send button{    
     border-radius: 30px;
     border: none;
-    background-color: var(--primary-color);
+    background-color: green;
+    padding: 0px 10px;
 }
 
-.container-send p {   
-    font-size: 4vw;
+.container-send p { 
+    color: white;
+    font-family: var(--second-font);  
+    font-size: 4vw;      
 }
+
+@media screen and (min-width:678px ) {
+
+    .ttle-cart{
+        font-size: 2.5vw;
+    }
+    .cards-shopping {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 60vw 40vw;      
+    } 
+
+    .items {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        grid-column-start: 1;
+    }
+
+    .items-oncar {
+        margin: 0 0 0px 80px;        
+        width: 80%;
+    }
+
+    .items-oncar p {
+        font-size: 1.2vw;
+    }
+    .items-oncar img {
+        width: 20%;
+        height: 20%;
+    }
+
+    .container-send {
+        width: 90%;
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+
+    .buttons-cart {
+        width: 50%;
+    }
+
+    .container-send h3 {
+        font-size: 2vw;
+    }
+
+    .container-send button{          
+        padding: 0px;
+    }
+
+    .container-send p {
+        font-size: 1.2vw;
+        margin: 10px;
+    }
+    .empty-cart{
+        grid-column-start: 1;
+        grid-column-end: 3;      
+    }
+
+    .empty-cart h1{
+        font-size: 2.5vw;
+        margin-top: 20px; 
+    }
+
+    .empty-cart img {
+        width: 30%;
+    }
+
+
+
+  
+}
+
 
 
