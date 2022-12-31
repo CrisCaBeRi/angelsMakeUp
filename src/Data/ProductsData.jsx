@@ -1,5 +1,4 @@
-
-
+//Json created who save the data of the products 
 const ProductsData = [
     {
         prItem: 1,
@@ -360,5 +359,4 @@ const ProductsData = [
         prPrice: 9600,   
     },      
 ]
-
 export default ProductsData; 

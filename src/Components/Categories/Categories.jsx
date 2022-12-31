@@ -1,4 +1,4 @@
-/* import React from "react"; */
+//Import all files - images and the Link method of React router dom 
 import './Categories.css';
 import { Link } from 'react-router-dom';
 import imgNails from './Assets/Nails_img.png';
@@ -13,10 +13,10 @@ const Categories = () => {
             <div className="banner_categories"><h1>Categorías</h1></div>        
             
             <div className='images_categories'>               
-
+                {/* This tag is used from react router dom like a method to go inside a new page, its exclusive from react router dom  */}
                 <Link to = "/products_nails" className='nat-nav'>
                     <div className='container_category'>                    
-                        <img src={imgNails} alt="" />
+                        <img src={imgNails} alt="" /> {/* this is a type to acces the img using a nickname defined on the import */}
                         <h2 className='ds1'>Uñas</h2>                    
                     </div>
                 </Link>

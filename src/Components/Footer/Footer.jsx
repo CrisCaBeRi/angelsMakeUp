@@ -1,11 +1,12 @@
+//Import the files of styles and the method Carousel of bootstrap 
 import React from "react";
 import "./Footer.css";
 import Carousel from 'react-bootstrap/Carousel';
 const Footer = () => {        
     return (
         <>
-            <footer>
-                <Carousel className="container_carousel_footer" variant="dark" >      
+            <footer> {/* tag footer defined to divide sections  */}
+                <Carousel className="container_carousel_footer" variant="dark" >  {/* same use like carousel home, acces from  the carousel method of bootstrap to create a carousel, but in this case is maded with text information and some images  */}   
                     <Carousel.Item>
                         <div className="adress">
                             <h2> Dirección </h2>
